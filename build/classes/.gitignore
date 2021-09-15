@@ -1,5 +1,8 @@
+/AppMain.class
+/META-INF/
+/bean/
+/controller/
 /net/
 /repository/
 /service/
-/controller/
-/AppMain.class
+/views.properties
