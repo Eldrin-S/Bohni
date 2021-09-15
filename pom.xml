@@ -85,11 +85,6 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<artifactId>spring-webmvc</artifactId>
 	<version>5.3.9</version>
 </dependency>
-<dependency>
-	<groupId>org.springframework</groupId>
-	<artifactId>web.servlet</artifactId>
-	<version>3.0.4.RELEASE</version>
-</dependency>
 <!-- Thanks for using https://jar-download.com -->
 
   </dependencies>  
