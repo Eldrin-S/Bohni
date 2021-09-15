@@ -85,7 +85,7 @@ public class PolicyController {
 		ModelAndView mav = new ModelAndView();
 		LocalDate startdate = LocalDate.now();
 		LocalDate enddate;
-		int numberOfYears = (int) session.getAttribute("numberOfYears");
+		int numberOfYears = Integer.parseInt(session.getAttribute("numberOfYears").toString());
 		enddate = startdate.plusYears(numberOfYears);
 		Register user = (Register) session.getAttribute("user");
 		VehicleRegistry vehicleReg = (VehicleRegistry) session.getAttribute("rtoObject");
