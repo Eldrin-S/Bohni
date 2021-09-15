@@ -87,7 +87,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 </dependency>
 <dependency>
 	<groupId>org.springframework</groupId>
-	<artifactId>org.springframework.web.servlet</artifactId>
+	<artifactId>web.servlet</artifactId>
 	<version>3.0.4.RELEASE</version>
 </dependency>
 <!-- Thanks for using https://jar-download.com -->
