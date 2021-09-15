@@ -73,6 +73,20 @@ public class AdminController {
 		
 		return mav;
 	}
+	public ModelAndView viewAdminLogin() {
+		ModelAndView mav = new ModelAndView();
+		
+		
+		mav.setViewName("adminlogin");
+		
+		
+	
+		
+			
+		
+		
+		return mav;
+	}
 	
 	@RequestMapping("/addSubAdmin.do")
 	public ModelAndView addSubAdmin(Admin subadmin, HttpSession session) {
