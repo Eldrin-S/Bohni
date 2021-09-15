@@ -158,7 +158,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <configuration>
     <webResources>
       <resources>
-        <directory>WebContent</directory>
+        <directory>webapp</directory>
         <includes>
           <include>**/*.*</include> <!--this line includes the xml files into the war, which will be found when it is exploded in server during deployment -->
         </includes>
@@ -167,7 +167,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
         </excludes>
       </resources>
     </webResources>
-    <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+    <webXml>webapp/WEB-INF/web.xml</webXml>
   </configuration>
 </plugin> 
     </plugins>  
