@@ -35,7 +35,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 <dependency>
   <groupId>org.postgresql</groupId>
   <artifactId>postgresql</artifactId>
-  <version>VERSION</version>
+  <version>42.2.23</version>
 </dependency>
   </dependencies>  
   
