@@ -9,7 +9,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <groupId>com.javatpoint.application1</groupId>  
   <artifactId>my-application1</artifactId>  
   <version>1.0</version>  
-  <packaging>jar</packaging>  
+  <packaging>war</packaging>  
   
   <name>Maven Quick Start Archetype</name>  
   <url>http://maven.apache.org</url>  
@@ -122,6 +122,15 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
             </configuration>
 		
         </plugin>  
+        
+        <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
+    
     </plugins>  
 </build>  
  <!--  <dependencyManagement>
@@ -135,5 +144,4 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
         </dependency>   
     </dependencies>
 </dependencyManagement> -->
-  
 </project>  
