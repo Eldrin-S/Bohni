@@ -93,11 +93,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <version>1.4</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/uri/uri -->
-<dependency>
-    <groupId>uri</groupId>
-    <artifactId>uri</artifactId>
-    <version>1.1.0</version>
-</dependency>
+
 
   </dependencies>  
   <build>  
