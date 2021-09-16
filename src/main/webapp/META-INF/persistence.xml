@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
-	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
-		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 
-	<bean class="java.net.URI" id="dbUrl">
-    <constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/>
-</bean>
+	<persistence-unit name="gerenciadorAcessoPU"
+		transaction-type="RESOURCE_LOCAL">
+		<properties>
 
-<bean id="ds" class="org.apache.commons.dbcp.BasicDataSource">
-    <property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() + @dbUrl.getPath() }"/>
-    <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }"/>
-    <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
-</bean>
-</beans>
+
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/test" />
+			<property name="javax.persistence.jdbc.user" value="postgres" />
+			<property name="javax.persistence.jdbc.password" value="James123" />
+
+
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+
+
+		</properties>
+	</persistence-unit>
+
+</persistence>
