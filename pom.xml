@@ -79,7 +79,6 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <groupId>org.springframework</groupId>
     <artifactId>spring-tx</artifactId>
     <version>5.3.9</version>
-    <scope>test</scope>
 </dependency>
 
 
