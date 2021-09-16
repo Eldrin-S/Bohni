@@ -9,7 +9,7 @@
     <constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/>
 </bean>
 
-<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+<bean id="ds" class="org.apache.commons.dbcp.BasicDataSource">
     <property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() + @dbUrl.getPath() }"/>
     <property name="username" value="ulcjmawcdudsja"/>
     <property name="password" value="dd8c3727ec89d3f971e1ee41f6c26c3814d076bc7d6652299042c9c182b93b7d"/>
