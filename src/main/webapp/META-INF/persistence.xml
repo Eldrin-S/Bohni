@@ -14,5 +14,4 @@
     <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }"/>
     <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
 </bean>
-
 </beans>
