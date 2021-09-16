@@ -21,7 +21,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class Campaign_And_Vehicle_Details {
 	@Id
 	@GeneratedValue
-	public int live_campaign_id;
+	private int live_campaign_id;
 	
 	@ManyToOne(cascade = {CascadeType.MERGE})
 	  @JoinColumn(name = "vehicleId") 
@@ -38,7 +38,7 @@ public class Campaign_And_Vehicle_Details {
 	private String record_status;
 	
 	@Column(nullable = true)
-	public long total_kms_ran;
+	private long total_kms_ran;
 
 	public int getLive_campaign_id() {
 		return live_campaign_id;
