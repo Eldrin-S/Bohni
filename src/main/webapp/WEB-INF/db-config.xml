@@ -6,11 +6,11 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean class="java.net.URI" id="dbUrl">
-    <constructor-arg value="ulcjmawcdudsja:dd8c3727ec89d3f971e1ee41f6c26c3814d076bc7d6652299042c9c182b93b7d@ec2-54-81-126-150.compute-1.amazonaws.com:5432/d90i5uq1pn0onq"/>
+    <constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/>
 </bean>
 
 <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-    <property name="url" value="jdbc:postgresql:ec2-54-81-126-150.compute-1.amazonaws.com:5432:d90i5uq1pn0onq"/>
+    <property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() + @dbUrl.getPath() }"/>
     <property name="username" value="ulcjmawcdudsja"/>
     <property name="password" value="dd8c3727ec89d3f971e1ee41f6c26c3814d076bc7d6652299042c9c182b93b7d"/>
 </bean>
